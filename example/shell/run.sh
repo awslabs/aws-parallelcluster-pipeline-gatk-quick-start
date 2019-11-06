@@ -1,0 +1,1 @@
+sh command.sh /genomes/temp/1
