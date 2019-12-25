@@ -82,7 +82,7 @@ This guide will lead you to build a complete cluster, include master node, compu
 
 **Open the console website, and click *My Security Credencials***
 
-**Create and save aws_access_key_id及aws_secret_access_key**
+**Create and save aws_access_key_id and aws_secret_access_key**
 
 <br>
 
