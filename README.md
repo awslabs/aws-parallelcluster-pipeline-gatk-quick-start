@@ -83,7 +83,7 @@
 ### 2、端到端的基因大数据分析、归档、交付方案
 ![端到端的基因大数据分析、归档、交付方案](images/5.png)
 ## 三、迁移部署流程
-[建议迁移部署方法](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/doc/01.migrate/README.md)
+[建议迁移部署方法](doc/01.migrate/README.md)
 ## 四、测试文档
 ### 1、10分钟集群部署
 下述文档示例会启动一个完整的HPC集群，包括主节点、计算节点、共享存储以及预装SGE作业调度系统，AMI为预装GATK相关软件的镜像，包括bwa，Samtools，gatk4等，镜像snapshot为GATK公开数据集，包括数据库及测试文件，启动后挂载到/genomics目录下。
@@ -254,14 +254,14 @@ for((i=1;i<=10;i++));do echo "sh /genomes/temp/run.sh $i" | qsub -l nodes=1,wall
 ### 2、AMI
 ***制作自定义ami请参考官方文档***
 
-+ [alinux](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/AMI/alinux.sh)
-+ [ubuntu](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/AMI/ubuntu.sh)
++ [alinux](AMI/alinux.sh)
++ [ubuntu](AMI/ubuntu.sh)
 
 ### 3、DEMO
 
-+ [基于nextflow工具调度的demo](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/example/nextflow/README.md)
-+ [基于cromwell工具调度的demo](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/example/cromwell/README.md)
-+ [基于shell的demo](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/example/shell/README.md)
++ [基于nextflow工具调度的demo](example/nextflow/README.md)
++ [基于cromwell工具调度的demo](example/cromwell/README.md)
++ [基于shell的demo](example/shell/README.md)
 
 
 ## 五、参考资料：
