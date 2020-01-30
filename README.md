@@ -1,7 +1,7 @@
 # GATK Best Practice on AWS
 
-+ [Chinese](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/README.md)
-+ [English](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/README-en.md)
++ [Chinese](./README.md)
++ [English](./README-en.md)
 
 * [一、方案简介](#一方案简介)
     * [1、现状及方案概述](#1现状及方案概述)
