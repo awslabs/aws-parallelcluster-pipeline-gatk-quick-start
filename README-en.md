@@ -234,14 +234,14 @@ for((i=1;i<=10;i++));do echo "sh /genomes/temp/run.sh $i" | qsub -l nodes=1,wall
 ### AMI
 ***p.s. You can customize your own ami by offcial document***
 
-+ [alinux](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/AMI/alinux.sh)
-+ [ubuntu](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/AMI/ubuntu.sh)
++ [alinux](AMI/alinux.sh)
++ [ubuntu](AMI/ubuntu.sh)
 
 ### DEMO
 
-+ [nextflow based demo](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/example/nextflow/README.md)
-+ [cromwell based demo](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/example/cromwell/README.md)
-+ [shell based demo](https://github.com/lab798/GATK-Best-Practice-on-AWS/tree/master/example/shell/README.md)
++ [nextflow based demo](example/nextflow/README.md)
++ [cromwell based demo](example/cromwell/README.md)
++ [shell based demo](example/shell/README.md)
 
 
 ## Reference：
@@ -251,31 +251,31 @@ for((i=1;i<=10;i++));do echo "sh /genomes/temp/run.sh $i" | qsub -l nodes=1,wall
 + [aws-parallelcluster GitHub repository](https://github.com/aws/aws-parallelcluster)
 + AMI Version
 
-|System	|Version	|pcluster version	|AMI ID	|Describe|Region	|Public	|Available	|Remark	|
-|---	|---	|---	|---	|---	|---	|---	|---	|---	|
-|alinux-base	|	|2.3.1	|ami-0e58e06d5b958ccb6	|basic AMI	|BJS	|Y	|Y	|	|
-|ubuntu-base	|16.04	|2.3.1	|ami-0a9c1879e6583621e	|basic AMI|BJS	|Y	|Y	|	|
-|alinux	|0.1	|2.3.1	|ami-0997595bce93c6e7b	|basic tools	|BJS	|Y	|Y	|	|
-|alinux	|0.2	|2.3.1	|ami-0cad4e9d804bd9c15	|basic tools + Golang tool + goofys; fixed pip issue;installed awscli; fixed issue that can not mount goofys, and install fuse depands lib  |BJS	|Y	|Y	|	|
-|alinux	|0.2	|2.4.0	|ami-0b876120ec98b9a7c	|basic tools	|BJS	|Y	|Y	|	|
-|ubuntu	|0.1	|2.3.1	|ami-097d3bf901991372e	|basic tools	|BJS	|Y	|Y	|	|
-|ubuntu	|0.2	|2.3.1	|ami-041e4a3bce09385b9	|change shell(dash) to bash	|BJS	|Y	|Y	|stoped update	|
-|ubuntu	|0.2-a	|2.3.1	|ami-026882b56146cdc1b	|basic tools + Golang tool + goofys	|BJS	|Y	|Y	|	|
-|alinux	|0.1	|2.3.1	|ami-007f6ed61542ae017	|basic tools	|ZHY	|Y	|Y	|	|
-|alinux	|0.2	|2.4.0	|ami-005db8a58ebd4e9a4	|basic tools	|ZHY	|Y	|Y	|	|
-|ubuntu	|0.1	|2.3.1	|ami-0a1d99c2c70e3f86c	|basic tools	|ZHY	|Y	|N	|	|
-|ubuntu	|0.2	|2.3.1	|ami-071aa7a2927cc02a8	|changed shell(dash) to bash	|ZHY	|Y	|N	|stoped update	|
-|ubuntu	|0.2-a	|2.3.1	|ami-015f3a018cc98b6cc	|basic tools + Golang tool + goofys	|ZHY	|Y	|N	|	|
+|System |Version  |pcluster version |AMI ID |Describe|Region  |Public |Available  |Remark |
+|---  |---  |---  |---  |---  |---  |---  |---  |---  |
+|alinux-base  | |2.3.1  |ami-0e58e06d5b958ccb6  |basic AMI  |BJS  |Y  |Y  | |
+|ubuntu-base  |16.04  |2.3.1  |ami-0a9c1879e6583621e  |basic AMI|BJS  |Y  |Y  | |
+|alinux |0.1  |2.3.1  |ami-0997595bce93c6e7b  |basic tools  |BJS  |Y  |Y  | |
+|alinux |0.2  |2.3.1  |ami-0cad4e9d804bd9c15  |basic tools + Golang tool + goofys; fixed pip issue;installed awscli; fixed issue that can not mount goofys, and install fuse depands lib  |BJS  |Y  |Y  | |
+|alinux |0.2  |2.4.0  |ami-0b876120ec98b9a7c  |basic tools  |BJS  |Y  |Y  | |
+|ubuntu |0.1  |2.3.1  |ami-097d3bf901991372e  |basic tools  |BJS  |Y  |Y  | |
+|ubuntu |0.2  |2.3.1  |ami-041e4a3bce09385b9  |change shell(dash) to bash |BJS  |Y  |Y  |stoped update  |
+|ubuntu |0.2-a  |2.3.1  |ami-026882b56146cdc1b  |basic tools + Golang tool + goofys |BJS  |Y  |Y  | |
+|alinux |0.1  |2.3.1  |ami-007f6ed61542ae017  |basic tools  |ZHY  |Y  |Y  | |
+|alinux |0.2  |2.4.0  |ami-005db8a58ebd4e9a4  |basic tools  |ZHY  |Y  |Y  | |
+|ubuntu |0.1  |2.3.1  |ami-0a1d99c2c70e3f86c  |basic tools  |ZHY  |Y  |N  | |
+|ubuntu |0.2  |2.3.1  |ami-071aa7a2927cc02a8  |changed shell(dash) to bash  |ZHY  |Y  |N  |stoped update  |
+|ubuntu |0.2-a  |2.3.1  |ami-015f3a018cc98b6cc  |basic tools + Golang tool + goofys |ZHY  |Y  |N  | |
 
 •   EBS snapshot version：
 
-|Name	|Version|snap ID	|Size	|describe	|Region	|
-|---	|---	|---	|---	|---	|---	|
-|gatk-reference v0.1	|0.1	|snap-09c16ac9809cf4359	|100G	|basic tools snapshot, including hg19 database	|BJS	|
-|gatk-reference v0.2	|0.2	|snap-06f5e874571e44510	|100G	|added hg38 and GATK data base	|BJS	|
-|gatk-reference-v0.3	|0.3	|snap-08a4b975a2f40736f	|1T	|added testing files and GATK-TEST-DATA	|BJS	|
-|gatk-reference-v0.3	|0.3	|snap-040c71fd2bb5d4236	|1T	|added testing files and GATK-TEST-DATA	|ZHY	|
-|	|	|	|	|	|	|
+|Name |Version|snap ID  |Size |describe |Region |
+|---  |---  |---  |---  |---  |---  |
+|gatk-reference v0.1  |0.1  |snap-09c16ac9809cf4359 |100G |basic tools snapshot, including hg19 database  |BJS  |
+|gatk-reference v0.2  |0.2  |snap-06f5e874571e44510 |100G |added hg38 and GATK data base  |BJS  |
+|gatk-reference-v0.3  |0.3  |snap-08a4b975a2f40736f |1T |added testing files and GATK-TEST-DATA |BJS  |
+|gatk-reference-v0.3  |0.3  |snap-040c71fd2bb5d4236 |1T |added testing files and GATK-TEST-DATA |ZHY  |
+| | | | | | |
 
 ## FAQ
 
