@@ -62,13 +62,13 @@
 ### 2、解决的需求和问题
 #### 1)、生产与测试系统未隔离，各产品线共用一套集群
 #### 2)、本地集群无容灾，一旦受损（宕机、环境变动）、停止（如物业计划维护、断网断电等）将影响所有产品业务
-![](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/1.png)
+![](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/1.png)
 
 #### 3)、计算存储资源量估算困难，部署周期长，业务线变动较大
-![](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/2.png)
+![](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/2.png)
 
 #### 4)、开发迭代混乱，集群环境大家共同维护，难以做到版本控制和环境复现!
-![](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/3.png)
+![](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/3.png)
 
 #### 5)、行业其他问题：
 ##### ①、项目管理靠人工跟踪，无信息化系统或信息化程度低
@@ -79,9 +79,9 @@
 
 ## 二、详细方案说明
 ### 1、集群解决方案
-![集群解决方案](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/4.png)
+![集群解决方案](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/4.png)
 ### 2、端到端的基因大数据分析、归档、交付方案
-![端到端的基因大数据分析、归档、交付方案](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/5.png)
+![端到端的基因大数据分析、归档、交付方案](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/5.png)
 ## 三、迁移部署流程
 [建议迁移部署方法](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/tree/master/doc/01.migrate/README.md)
 ## 四、测试文档
@@ -102,11 +102,11 @@
 
 <br>
 
-![](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/6.png)
+![](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/6.png)
 
 <br>
 
-![](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/7.png)
+![](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/7.png)
 
 <br>
 <br>
@@ -139,15 +139,15 @@ sudo pip install aws-parallelcluster
 
 <br>
 
-![](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/8.png)
+![](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/8.png)
 
 <br>
 
-![](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/9.png)
+![](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/9.png)
 
 <br>
 
-![](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/10.png)
+![](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/10.png)
 
 <br>
 <br>
@@ -160,7 +160,7 @@ sudo pip install aws-parallelcluster
 
 <br>
 
-![](https://github.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/blob/master/images/11.png)
+![](https://raw.githubusercontent.com/awslabs/aws-parallelcluster-pipeline-gatk-quick-start/master/images/11.png)
 
 ##### ②、配置pcluster config([可参考官方博客](https://docs.aws.amazon.com/zh_cn/parallelcluster/latest/ug/configuration.html))
 
