@@ -187,7 +187,7 @@ ssh = ssh {CFN_USER}@{MASTER_IP} {ARGS}
 base_os = alinux
 custom_ami = ami-056169db492793d02 #根据需要修改
 vpc_settings = public
-scheduler = slurm
+scheduler = sge
 key_name = ZHY_key  #需要修改
 compute_instance_type = m5.xlarge
 master_instance_type = m5.xlarge
@@ -273,7 +273,9 @@ for((i=1;i<=10;i++));do echo "sh /genomes/temp/run.sh $i" | qsub -l nodes=1,wall
   
 |系统	|版本号	|pcluster版本	|AMI ID	|更新描述	|地域	|是否公开	|可用性	|备注	|
 |---	|---	|---	|---	|---	|---	|---	|---	|---	|
-|alinux	|0.2	|2.4.1	|ami-ami-005d4f6437dca2d6d	|基础软件环境AMI + Golang环境 + goofys	|BJS	|是	|是	|	|
+|alinux	|0.2	|2.5.1	|ami-08872563ba80e5a5a	|基础软件环境AMI + Golang环境 + goofys	|BJS	|是	|是	|	|
+|alinux	|0.2	|2.5.1	|ami-0c699afa91eb1d073	|基础软件环境AMI + Golang环境 + goofys	|ZHY	|是	|是	|	|
+|alinux	|0.2	|2.4.1	|ami-005d4f6437dca2d6d	|基础软件环境AMI + Golang环境 + goofys	|BJS	|是	|是	|	|
 |alinux	|0.2	|2.4.1	|ami-056169db492793d02	|基础软件环境AMI + Golang环境 + goofys	|ZHY	|是	|是	|	|
 
 + 镜像版本迭代
@@ -305,4 +307,24 @@ for((i=1;i<=10;i++));do echo "sh /genomes/temp/run.sh $i" | qsub -l nodes=1,wall
 |	|	|	|	|	|	|
 
 ## 六、FAQ
-
+### 1、节点启动速度较慢问题
++ 由于在启动过程中需要从海外拉取镜像，拉取超时/失败时会倒是节点启动失败，若客户镜像由官方镜像迭代而来，大部分软件已经在本地预装好了，可通过pre_install来跳过拉取安装的过程，提高节点启动速度，讲下述代码保存为sh脚本文件,并上传至S3或web服务器，保证启动时可通过s3 api/http方式获取。
+```shell
+#!/bin/bash
+sudo sed -i "s/include_recipe 'aws-parallelcluster::base_install'/#include_recipe 'aws-parallelcluster::base_install'/g" /etc/chef/cookbooks/aws-parallelcluster/recipes/sge_install.rb /etc/chef/cookbooks/aws-parallelcluster/recipes/base_config.rb
+```
++ 修改启动配置config，在cluster标签下添加pre_install及pre_install_args参数，示例如下：
+```shell
+[cluster GATK-pipeline]
+base_os = alinux
+...
+compute_instance_type = c5.2xlarge
+master_instance_type = t2.medium
+compute_root_volume_size = 50
+master_root_volume_size = 50
+initial_queue_size = 1
+max_queue_size = 2
+maintain_initial_size = false
+pre_install = http://xxxxx.s3.cn-north-1.amazonaws.com.cn/pre_install.sh
+pre_install_args = "NONE"
+```

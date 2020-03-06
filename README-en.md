@@ -253,6 +253,8 @@ for((i=1;i<=10;i++));do echo "sh /genomes/temp/run.sh $i" | qsub -l nodes=1,wall
 
 |System |Version  |pcluster version |AMI ID |Describe|Region  |Public |Available  |Remark |
 |---  |---  |---  |---  |---  |---  |---  |---  |---  |
+|alinux	|0.2	|2.5.1	|ami-08872563ba80e5a5a	|basic tools	|BJS	|Y	|Y	|	|
+|alinux	|0.2	|2.5.1	|ami-0c699afa91eb1d073	|basic tools	|ZHY	|Y	|Y	|	|
 |alinux-base  | |2.3.1  |ami-0e58e06d5b958ccb6  |basic AMI  |BJS  |Y  |Y  | |
 |ubuntu-base  |16.04  |2.3.1  |ami-0a9c1879e6583621e  |basic AMI|BJS  |Y  |Y  | |
 |alinux |0.1  |2.3.1  |ami-0997595bce93c6e7b  |basic tools  |BJS  |Y  |Y  | |
